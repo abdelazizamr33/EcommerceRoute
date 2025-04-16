@@ -48,7 +48,7 @@ namespace Store.Route.Api
             app.UseHttpsRedirection();
 
             app.UseAuthorization();
-
+            app.UseStaticFiles();
 
             app.MapControllers();
 
