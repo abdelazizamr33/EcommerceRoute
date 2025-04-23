@@ -50,4 +50,4 @@ This project is still under development. Planned upcoming features
 
 ## 📬 Contact
 
-For any questions or collaboration opportunities, feel free to reach out via [LinkedIn](https://www.linkedin.com/in/yourprofile) or GitHub issues.
+For any questions or collaboration opportunities, feel free to reach out via [LinkedIn](https://www.linkedin.com/in/abdelazizamr33/) or GitHub issues.
