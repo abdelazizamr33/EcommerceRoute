@@ -53,6 +53,8 @@ namespace Store.Route.Api.Middlewares
             {
                 NotFoundException => StatusCodes.Status404NotFound,
                 BadRequestException => StatusCodes.Status400BadRequest,
+                ValidationExceptions => StatusCodes.Status400BadRequest,
+                UnauthorizedAccessException => HandleValidationExceptionAsync((ValidationExceptions)ex,response),
                 _ => StatusCodes.Status500InternalServerError,
             };
 
@@ -71,5 +73,12 @@ namespace Store.Route.Api.Middlewares
             };
             await context.Response.WriteAsJsonAsync(response);
         }
+
+        private static int HandleValidationExceptionAsync(ValidationExceptions ex,ErrorDetails response)
+        {
+            response.Errors = ex.Errors;
+            return StatusCodes.Status401Unauthorized;
+        }
+
     }
 }
